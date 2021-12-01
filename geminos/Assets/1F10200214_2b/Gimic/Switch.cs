@@ -17,6 +17,7 @@ public class Switch : MonoBehaviour
 	GameObject swap;
 	Rez_wall_v2 Rez_Wall_v2;
 	Rez_wall Rez_Wall;
+	SwapUI swapui;
 	public int move_select;	//スイッチと連動させる壁を指定したい
 	public int Move_select
     {
@@ -41,6 +42,7 @@ public class Switch : MonoBehaviour
 		s_Lk = GameObject.Find("silver");
 		s_Rk = GameObject.Find("gold");
 		swap = GameObject.Find("SwapUI");
+		swapui = swap.GetComponent<SwapUI>();
 		Rez_Wall_v2 = FindObjectOfType<Rez_wall_v2>();
 		Rez_Wall = FindObjectOfType<Rez_wall>();
 	}
@@ -74,7 +76,7 @@ public class Switch : MonoBehaviour
 					Debug.Log("tiiiii");
 					s_Lk.GetComponent<PlayerMove>().SwapKey();
 					s_Rk.GetComponent<PlayerMove_R>().SwapKey();
-					swap.GetComponent<SwapUI>().swapUI();
+					swapui.swapUI();
 					check = false;
 
 				}
