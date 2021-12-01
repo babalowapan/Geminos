@@ -75,11 +75,11 @@ public class PlayerMove_R : MonoBehaviour
                 if (swap) {
                     if (Input.GetKeyDown(KeyCode.D) || R_button.r_p)//ジャンプのキー入力
                     {
-                        jump = true;
-                        rbody2D.velocity = new Vector3(rbody2D.velocity.x, 0, 0);
-                        rbody2D.AddForce(new Vector2(Jumppower/3, Jumppower), ForceMode2D.Impulse);
+                        //jump = true;
+                        //rbody2D.velocity = new Vector3(rbody2D.velocity.x, 0, 0);
+                        rbody2D.AddForce(Vector3.forward * Jumppower / 3 + Vector3.up * Jumppower, ForceMode2D.Impulse);
                         R_button.r_p = false;
-                        anim.SetBool("run", false);
+                        //anim.SetBool("run", false);
                     }
                     else
                     {
@@ -90,11 +90,11 @@ public class PlayerMove_R : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.A) || L_button.l_p)//ジャンプのキー入力
                     {
-                        jump = true;
-                        rbody2D.velocity = new Vector3(rbody2D.velocity.x, 0, 0);
-                        rbody2D.AddForce(Vector3.up * Jumppower, ForceMode2D.Impulse);
+                        //jump = true;
+                        //rbody2D.velocity = new Vector3(rbody2D.velocity.x, 0, 0);
+                        rbody2D.AddForce(Vector3.forward * Jumppower / 3 + Vector3.up * Jumppower, ForceMode2D.Impulse);
                         L_button.l_p = false;
-                        anim.SetBool("run", false);
+                        //anim.SetBool("run", false);
                     }
                     else
                     {
@@ -112,6 +112,7 @@ public class PlayerMove_R : MonoBehaviour
                 }
                 ago_pos = this.gameObject.transform.position;
             }
+            /*
             else if (ground.IsGround() == false)
             {
                 if (jump)
@@ -125,7 +126,7 @@ public class PlayerMove_R : MonoBehaviour
                     anim.SetBool("fall", true);
                     anim.SetBool("run", false);
                 }
-            }
+            }*/
 
 
         }

@@ -109,6 +109,7 @@ public class PlayerMove : MonoBehaviour
                 ago_pos = this.gameObject.transform.position;
 
             }
+            /*
             else if (ground.IsGround() == false)
             {
                 if (jump)
@@ -124,7 +125,7 @@ public class PlayerMove : MonoBehaviour
                     anim.SetBool("run", false);
                 }
             }
-           
+           */
         }
         
     }
