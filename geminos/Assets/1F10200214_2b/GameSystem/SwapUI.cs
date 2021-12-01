@@ -17,6 +17,7 @@ public class SwapUI : MonoBehaviour
     {
         if (swap == false)
         {
+            Debug.Log("swap");
             UI.SetActive(true);
             swap = true;
 }
@@ -24,6 +25,7 @@ public class SwapUI : MonoBehaviour
         {
             UI.SetActive(false);
             swap = false;
+            Debug.Log("swap");
         }
 
     }

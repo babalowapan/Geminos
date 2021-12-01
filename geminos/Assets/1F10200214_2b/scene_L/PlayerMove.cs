@@ -68,7 +68,7 @@ public class PlayerMove : MonoBehaviour
             pos_other = other.transform.position;
             if (ground.IsGround())//地面に接地しているとき
             {
-                anim.SetBool("fall", false);
+                //anim.SetBool("fall", false);
                 rbody2D.velocity = new Vector3(9, rbody2D.velocity.y, 0);
                 if (swap)
                 {
