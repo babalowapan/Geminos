@@ -77,7 +77,7 @@ public class PlayerMove_R : MonoBehaviour
                     {
                         //jump = true;
                         //rbody2D.velocity = new Vector3(rbody2D.velocity.x, 0, 0);
-                        rbody2D.AddForce(new Vector2(Jumppower/3, Jumppower), ForceMode2D.Impulse);
+                        rbody2D.AddForce(Vector3.forward * Jumppower / 3 + Vector3.up * Jumppower, ForceMode2D.Impulse);
                         R_button.r_p = false;
                         //anim.SetBool("run", false);
                     }
@@ -92,7 +92,7 @@ public class PlayerMove_R : MonoBehaviour
                     {
                         //jump = true;
                         //rbody2D.velocity = new Vector3(rbody2D.velocity.x, 0, 0);
-                        rbody2D.AddForce(Vector3.up * Jumppower, ForceMode2D.Impulse);
+                        rbody2D.AddForce(Vector3.forward * Jumppower / 3 + Vector3.up * Jumppower, ForceMode2D.Impulse);
                         L_button.l_p = false;
                         //anim.SetBool("run", false);
                     }
