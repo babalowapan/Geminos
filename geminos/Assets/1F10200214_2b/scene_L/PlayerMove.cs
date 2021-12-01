@@ -74,8 +74,8 @@ public class PlayerMove : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.A) || L_button.l_p)//ジャンプのキー入力
                     {
-                        jump = true;
-                        anim.SetBool("run", false);
+                        //jump = true;
+                        //anim.SetBool("run", false);
                         rbody2D.AddForce(Vector3.forward * Jumppower / 3 + Vector3.up * Jumppower, ForceMode2D.Impulse);
                         L_button.l_p = false;
                     }
@@ -88,10 +88,10 @@ public class PlayerMove : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.D) || R_button.r_p)//ジャンプのキー入力
                     {
-                        jump = true;
+                        //jump = true;
                         rbody2D.AddForce(Vector3.forward*Jumppower/3 + Vector3.up * Jumppower, ForceMode2D.Impulse);
                         R_button.r_p = false;
-                        anim.SetBool("run", false);                      
+                        //anim.SetBool("run", false);                      
                     }
                     else
                     {
@@ -109,6 +109,7 @@ public class PlayerMove : MonoBehaviour
                 ago_pos = this.gameObject.transform.position;
 
             }
+            /*
             else if (ground.IsGround() == false)
             {
                 if (jump)
@@ -123,7 +124,7 @@ public class PlayerMove : MonoBehaviour
                     anim.SetBool("fall", true);
                     anim.SetBool("run", false);
                 }
-            }
+            }*/
            
         }
         
