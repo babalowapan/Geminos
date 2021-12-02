@@ -7,7 +7,7 @@ public class BackgroundCreator : MonoBehaviour
     public GameObject back;
     float sety;
     public GameObject target;
-    float setx = 163;
+    float setx = 536;
     float baseX = 76;
     float p_pos = 302;
     Vector3 pos;
@@ -23,14 +23,14 @@ public class BackgroundCreator : MonoBehaviour
     void Start()
     {
         sety = -5f;
-        CreateBack(72, sety, 1);
-        CreateBack(-72, sety, 1);
-        CreateBack(187, sety, 1);
-        CreateBack(-187, sety, 1);
-        CreateBack(302, sety, 1);
-        CreateBack(-302, sety, 1);
-        CreateBack(417, sety, 1);
-        CreateBack(-417, sety, 1);
+        CreateBack(77, sety, 1);
+        CreateBack(-77, sety, 1);
+        CreateBack(230, sety, 1);
+        CreateBack(-230, sety, 1);
+        CreateBack(383, sety, 1);
+        CreateBack(-383, sety, 1);
+        CreateBack(536, sety, 1);
+        CreateBack(-536, sety, 1);
         pos = target.transform.position;
     }
 
@@ -41,10 +41,10 @@ public class BackgroundCreator : MonoBehaviour
         pos = target.transform.position; //プレイヤーが一定座標を超えたら背景を召喚したい
         if (pos.x >= p_pos)
         {
-            setx += 115;
+            setx += 153;
             CreateBack(setx, sety, 1);
             CreateBack(setx * -1, sety, 1);
-            p_pos += 115;
+            p_pos += 153;
         }
     }
 }

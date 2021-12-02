@@ -29,8 +29,8 @@ public class StageDirector : MonoBehaviour
     Vector3 pos1;
     Vector3 pos2;
     float f_pos;
-    float pos= 280;
-    float check_pos = 200;
+    float pos= 310;
+    float check_pos = 230;
     int st_len = 10;
     GameObject tar_l;
     GameObject tar_r;
