@@ -25,6 +25,9 @@ public class EndFloor : MonoBehaviour
     {
         if (collision.tag == "under_c")
         {
+            
+            //GameObject.Find("gold").GetComponent<Animator>().SetTrigger("down");
+            //GameObject.Find("silver").GetComponent<Animator>().SetTrigger("down");
             PlayerMove.l_last_pos = sil.transform.position.x;
             PlayerMove_R.r_last_pos = Mathf.Abs(gol.transform.position.x);
             FadeManager.FadeOut(2);

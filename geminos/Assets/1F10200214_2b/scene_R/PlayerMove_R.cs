@@ -57,7 +57,7 @@ public class PlayerMove_R : MonoBehaviour
             this.gameObject.SetActive(false);
             Time.timeScale = 0;
         }
-
+        
         else if (PlayerMove.l_time >= 3 || r_time >= 3)
         {
             r_last_pos = Mathf.Abs(this.gameObject.transform.position.x);
@@ -112,7 +112,7 @@ public class PlayerMove_R : MonoBehaviour
                 }
                 ago_pos = this.gameObject.transform.position;
             }
-            /*
+            
             else if (ground.IsGround() == false)
             {
                 if (jump)
@@ -126,7 +126,7 @@ public class PlayerMove_R : MonoBehaviour
                     anim.SetBool("fall", true);
                     anim.SetBool("run", false);
                 }
-            }*/
+            }
 
 
         }
