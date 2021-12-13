@@ -24,14 +24,12 @@ public class StageDirector : MonoBehaviour
     public GameObject s8_r;
     public GameObject s9_l;
     public GameObject s9_r;
-    public GameObject s10_l;
-    public GameObject s10_r;
     Vector3 pos1;
     Vector3 pos2;
     float f_pos;
     float pos= 310;
     float check_pos = 230;
-    int st_len = 10;
+    int st_len = 9;
     GameObject tar_l;
     GameObject tar_r;
     int i = 0;
@@ -124,11 +122,6 @@ public class StageDirector : MonoBehaviour
         {
             tar_l = s9_l;
             tar_r = s9_r;
-        }
-        else if (x == 10)
-        {
-            tar_l = s10_l;
-            tar_r = s10_r;
         }
 
         Instantiate(tar_l, new Vector3(y,0,1), Quaternion.identity);

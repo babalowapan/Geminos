@@ -35,7 +35,7 @@ public class Score : MonoBehaviour
 			Debug.Log(score);
 		}
 		sco = (int)score;
-		//SendData(sco, "b90b99255adf");
+		SendData(sco, "b90b99255adf");
 		T_time = "Score:" + sco.ToString();
 		Debug.Log(T_time);
 	}
