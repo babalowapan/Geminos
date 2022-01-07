@@ -22,14 +22,12 @@ public class StageDirector : MonoBehaviour
     public GameObject s7_r;
     public GameObject s8_l;
     public GameObject s8_r;
-    public GameObject s9_l;
-    public GameObject s9_r;
     Vector3 pos1;
     Vector3 pos2;
     float f_pos;
     float pos= 310;
     float check_pos = 230;
-    int st_len = 9;
+    int st_len = 8;
     GameObject tar_l;
     GameObject tar_r;
     int i = 0;
@@ -56,14 +54,14 @@ public class StageDirector : MonoBehaviour
         {
             if (check)
             {
-                i = Random.Range(6, st_len + 1);
+                i = Random.Range(4, st_len + 1);
             }
             else
             {
                 i++;
             }
 
-            if (i==10)
+            if (i==9)
             {
                 check = true;
             }
@@ -118,11 +116,7 @@ public class StageDirector : MonoBehaviour
             tar_l = s8_l;
             tar_r = s8_r;
         }
-        else if (x == 9)
-        {
-            tar_l = s9_l;
-            tar_r = s9_r;
-        }
+
 
         Instantiate(tar_l, new Vector3(y,0,1), Quaternion.identity);
         Instantiate(tar_r, new Vector3(y*-1,0,1), Quaternion.identity);
